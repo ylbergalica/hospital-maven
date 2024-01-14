@@ -7,15 +7,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import javax.annotation.security.DenyAll;
-import javax.annotation.security.PermitAll;
-import javax.annotation.security.RolesAllowed;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.Provider;
+import jakarta.annotation.security.DenyAll;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.ext.Provider;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -29,7 +29,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
  * based on username and passowrd provided in request
  * */
 @Provider
-public class AuthenticationFilter implements javax.ws.rs.container.ContainerRequestFilter
+public class AuthenticationFilter implements jakarta.ws.rs.container.ContainerRequestFilter
 {
 	
 	@Context
