@@ -5,7 +5,7 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-// @ApplicationPath("/") // Optional, specify the base path for your RESTful resources
+@ApplicationPath("/rest") // Optional, specify the base path for your RESTful resources
 public class MyApplication extends Application {
 
     @Override
