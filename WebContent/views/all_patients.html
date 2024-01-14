@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Hospital</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" />
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<div id="utils">
+		<div id="showUsers" hidden>Show Users</div>
+		<div id="logout">Log out</div>
+	</div>
+
+	<!-- ADD RECORD POPUP -->
+	<div id="add_record" class="popup hidden">
+		<div class="popup-main">
+			<div class="popup-header">
+				<h3>~ Add Record ~</h3>
+				<span id="add_record_close" class="close-btn">&times;</span>
+			</div>
+			<div class="popup-body">
+				Patient Full Name: <input class="popup-input" type="text" id="add_patient_name"><br>
+				Blood Glucose Level: <input class="popup-input" type="text" id="add_blood_glucose_level"><br>
+				Carb Intake: <input class="popup-input" type="text" id="add_carb_intake"><br>
+				Medication Dose: <input class="popup-input" type="text" id="add_medication_dose"><br>
+
+				<button id="add_record_button" class="add-btn">Add Record</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- EDIT RECORD POPUP -->
+	<div id="edit_record" class="popup hidden">
+		<div class="popup-main">
+			<div class="popup-header">
+				<h3>~ Edit Record ~</h3>
+				<span id="edit_record_close" class="close-btn">&times;</span>
+			</div>
+			<div class="popup-body">
+				<input type="hidden" id="edit_record_id" class="hiddenID">
+				Patient Full Name: <input class="popup-input" type="text" id="edit_patient_name"><br>
+				Blood Glucose Level: <input class="popup-input" type="text" id="edit_blood_glucose_level"><br>
+				Carb Intake: <input class="popup-input" type="text" id="edit_carb_intake"><br>
+				Medication Dose: <input class="popup-input" type="text" id="edit_medication_dose"><br>
+
+				<button id="edit_record_button" class="add-btn">Change Record</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="table-container">
+		<!-- logout -->
+
+		<div id="all_patients" class="all-container">
+			<h3>~ Patient List ~</h3>
+			<div id="patients_table" class="patients-table"></div>
+		</div>
+
+		<div id="patient_details" class="details-container hidden">
+			<div id="details_header" class="details-header">
+				<button id="back_button" class="date-filter-btn">Back</button>
+				<h3>~ Patient Details ~</h3>
+
+				<!-- THIS IS THE FORM FOR SELECTING DATE -->
+				<div>
+					<label for="start_date">Start Date:</label>
+					<input class="date-select" type="date" id="start_date" name="start-date">
+					<label for="end_date">End Date:</label>
+					<input class="date-select" type="date" id="end_date" name="end-date">
+					<button class="date-filter-btn" id="filter_button">Filter</button>
+				</div>
+			</div>
+			<!-- The following div is created dynamically in the all_patients js file -->
+			<!-- <div id="patient_table" class="details-table"></div> -->
+
+			<!-- BAL A I QET QETU DIKUN QATO AVERAGES, BONI KU DUSH JSin NDAQ TE ALL_PATIENTS NDAQ DIKUN TJTR -->
+
+			<div class="extra-info">
+				<div id="chart_container" class="chart-container">
+					<div id="chart_header">Data Over Time</div>
+					<canvas id="myChart"></canvas>
+				</div>
+
+				<div id="average_container" class="average-container">
+					<div class="average-header">Averages for Selected Dates</div>
+					<div>
+						Blood Glucose Level: <span id="average_blood_glucose_level" class="average-value"></span>
+					</div>
+					<div>
+						Carb Intake: <span id="average_carb_intake" class="average-value"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script type="text/javascript" src="../scripts/all_patients.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Hospital</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="login-form">
+			<h3>~ The Mental Hospital ~</h3><br>
+
+			Username: <input class="login-input" type="text" id="username"><br>
+			Password: <input class="login-input" type="password" id="password"><br>
+			<button id="login_button" class="login-button">Login</button>
+		</div>
+	</div>
+
+	<script>
+		const link = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/rest/";
+
+		function handleLogin() {
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			// Make a POST request to the /login endpoint
+			fetch('http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/rest/users/login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ username, password }),
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Success:', data);
+					localStorage.setItem('token', data.token);
+					window.location.href = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/views/all_patients.html";
+				})
+				.catch(error => {
+					console.error('Error during login:', error);
+				});
+
+		}
+
+		const login_button = document.getElementById("login_button");
+		login_button.addEventListener("click", handleLogin);
+	</script>
+</body>
+
+</html>

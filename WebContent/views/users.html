@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Hospital</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" />
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<div id="utils">
+		<div id="logout">
+			Log out
+		</div>
+	</div>
+	<!-- ADD USER POPUP -->
+	<div id="add_user" class="popup hidden">
+		<div class="popup-main">
+			<div class="popup-header">
+				<a href="all_patients.html"><button class="date-filter-btn">Back</button></a>
+				<h3>~ Add User ~</h3>
+				<span id="add_user_close" class="close-btn">&times;</span>
+			</div>
+			<div class="popup-body">
+				Username: <input class="popup-input" type="text" id="add_username"><br>
+				Password: <input class="popup-input" type="password" id="add_password"><br>
+
+				Power Level: 
+				<div>
+					<input type="radio" id="add_admin" name="add_power_level" value="ADMIN">
+					<label for="admin">Admin</label>
+				</div>
+				<div>
+					<input type="radio" id="add_physician" name="add_power_level" value="PHYSICIAN">
+					<label for="physician">Physician</label><br>
+				</div>
+
+
+				<button id="add_user_button" class="add-btn">Add User</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- EDIT USER POPUP -->
+	<div id="edit_user" class="popup hidden">
+		<div class="popup-main">
+			<div class="popup-header">
+				<h3>~ Edit User ~</h3>
+				<span id="edit_user_close" class="close-btn">&times;</span>
+			</div>
+			<div class="popup-body">
+				<input type="hidden" id="edit_user_id" class="hiddenID">
+				New Username: <input class="popup-input" type="text" id="edit_username"><br>
+				<!-- Last: <input class="popup-input" type="password" id="last_password"><br> -->
+				New Password: <input class="popup-input" type="password" id="edit_password"><br>
+
+				Power Level:
+				<div>
+					<input type="radio" id="edit_admin" name="edit_power_level" value="ADMIN">
+					<label for="admin">Admin</label>
+				</div>
+				<div>
+					<input type="radio" id="edit_physician" name="edit_power_level" value="PHYSICIAN">
+					<label for="physician">Physician</label><br>
+				</div>
+
+				<button id="edit_user_button" class="add-btn">Update User</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="table-container">
+		<div id="all_users" class="details-container">
+			<a href="all_patients.html"><button class="date-filter-btn">Back</button></a>
+			<h3>~ User List ~</h3>
+			<div id="users_table" class="users-table"></div>
+			<button id="new_user_button" class="add-btn">New User</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+	<script type="text/javascript" src="../scripts/users.js"></script>
+</body>
+
+</html>
