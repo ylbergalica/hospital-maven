@@ -1,1 +1,1 @@
-web: java -jar target/MyWebsite-0.0.1-SNAPSHOT.war
+web: java -war target/MyWebsite-0.0.1-SNAPSHOT.war
