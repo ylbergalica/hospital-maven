@@ -1,4 +1,4 @@
-const link = "jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mzdte6a5r1nz4zso";
+const link = "https://hospital-maven-bcc4073ddde4.herokuapp.com/rest";
 
 const getDataFromREST = async (appendage) => {
 	let data;

@@ -1,4 +1,4 @@
-const link = "jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mzdte6a5r1nz4zso";
+const link = "https://hospital-maven-bcc4073ddde4.herokuapp.com/rest";
 {/* <button id="new_record_button" class="add-btn">New Record</button> */}
 
 let role = ''
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 showUser.onclick = () => {
-	window.location.href = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/views/users.html";
+	window.location.href = "https://hospital-maven-bcc4073ddde4.herokuapp.com/views/users.html";
 }
 
 
@@ -237,7 +237,7 @@ function cellButton(cell) {
 
 document.getElementById("logout").onclick = () => {
 	localStorage.removeItem("token");
-	window.location.href = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/index.html";
+	window.location.href = "https://hospital-maven-bcc4073ddde4.herokuapp.com/";
 }
 
 let patient_name;
