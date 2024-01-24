@@ -22,14 +22,14 @@
 	</div>
 
 	<script>
-		const link = "https://hospital-maven-bcc4073ddde4.herokuapp.com/rest";
+		const link = "https://hospital-maven-bcc4073ddde4.herokuapp.com";
 
 		function handleLogin() {
 			const username = document.getElementById("username").value;
 			const password = document.getElementById("password").value;
 
 			// Make a POST request to the /login endpoint
-			fetch(link + '/users/login', {
+			fetch(link + '/rest/users/login', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
