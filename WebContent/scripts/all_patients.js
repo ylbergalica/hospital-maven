@@ -1,4 +1,4 @@
-const link = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/rest";
+const link = "jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mzdte6a5r1nz4zso";
 {/* <button id="new_record_button" class="add-btn">New Record</button> */}
 
 let role = ''

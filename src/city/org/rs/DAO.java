@@ -18,11 +18,11 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public final class DAO {
 	private static DAO instance; 
 
-	private static final String URL = "jdbc:mysql://localhost:3306/hospital";
+	private static final String URL = "jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mzdte6a5r1nz4zso";
 
-    private static final String USER = "root";
+    private static final String USER = "qw8g7avl0h1coopw";
 
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "pm04tac1m35njxkr";
 
     private Connection connection;
 	

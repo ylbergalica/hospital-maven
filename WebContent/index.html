@@ -22,14 +22,14 @@
 	</div>
 
 	<script>
-		const link = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/rest/";
+		const link = "jdbc:mysql://h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mzdte6a5r1nz4zso";
 
 		function handleLogin() {
 			const username = document.getElementById("username").value;
 			const password = document.getElementById("password").value;
 
 			// Make a POST request to the /login endpoint
-			fetch('http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/rest/users/login', {
+			fetch(link + '/users/login', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -40,7 +40,7 @@
 				.then(data => {
 					console.log('Success:', data);
 					localStorage.setItem('token', data.token);
-					window.location.href = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/views/all_patients.html";
+					window.location.href = link + "/views/all_patients.html";
 				})
 				.catch(error => {
 					console.error('Error during login:', error);
