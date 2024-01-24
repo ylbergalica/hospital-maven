@@ -6,6 +6,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
+  	<properties>
+        <jersey.version>3.1.0-M3</jersey.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -19,22 +24,9 @@
   </dependencyManagement>
 
   <dependencies>
-    <!-- <dependency>
-      <groupId>jakarta.ws.rs</groupId>
-      <artifactId>jakarta.ws.rs-api</artifactId>
-      <version>3.0.0</version>
-    </dependency> -->
-
-    <dependency>
-      <groupId>org.glassfish.jersey.media</groupId>
-      <artifactId>jersey-media-json-binding</artifactId>
-    </dependency>
-
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet-core</artifactId>
-      <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
-      <!-- artifactId>jersey-container-servlet</artifactId -->
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
@@ -72,10 +64,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <jersey.version>3.1.0-M3</jersey.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  
 
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -93,7 +82,6 @@
         <version>3.2.1</version>
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
-          <appName>medication-app-cloud</appName>
         </configuration>
       </plugin>
       <plugin>
