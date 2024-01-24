@@ -22,7 +22,7 @@ const getDataFromREST = async (appendage) => {
 
 document.getElementById("logout").onclick = () => {
 	localStorage.removeItem("token");
-	window.location.href = "http://localhost:8080/MyWebsite-0.0.1-SNAPSHOT/index.html";
+	window.location.href = "https://hospital-maven-bcc4073ddde4.herokuapp.com/";
 }
 
 function toggleDiv(divID, hiddenID) {
